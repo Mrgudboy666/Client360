@@ -48,10 +48,3 @@ def signup_user(request):
         return render(request, 'signup.html', {'form':form})
     
     return render(request, 'signup.html', {'form':form})
-
-
-
-def contact_log(request, pk):
-    if request.user.is_authenticated:
-        # Contact check individually
-        contact_log = Contact.objects.get(id=pk)
